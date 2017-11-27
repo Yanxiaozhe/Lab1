@@ -597,75 +597,7 @@ public class project1 extends JFrame {
         visitedIndex.pop();
     }
 
-    /**
-     * initial data
-     */
-    /*private void initData() {
-        FileInputStream fileInputStream = null;
-        Scanner in = null;
-        List<String> allWords = new ArrayList<String>();
-        Set<String> setWords = new HashSet<String>();
-        // read from file
-        try {
-            fileInputStream = new FileInputStream(filename);
-            in = new Scanner(fileInputStream);
-            while (in.hasNextLine()) {
-                String line = in.nextLine();
-                StringBuilder temp = new StringBuilder();
-                // filt the word
-                for (int i = 0; i < line.length(); i++) {
-                    char ch = line.charAt(i);
-                    if (('a' <= ch && ch <= 'z') || ('A' <= ch && ch <= 'Z') || ' ' == ch) {
-                        temp.append(ch);
-                    }
-                }
-                String[] array = temp.toString().split(" ");
-                for (String str : array) {
-                    if (!"".equals(str)) {
-                        String tempStr = str.toLowerCase();
-                        allWords.add(tempStr);
-                        setWords.add(tempStr);
-                    }
-                }
-            }
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found: " + filename);
-            System.exit(0);
-        } finally {
-            if (fileInputStream != null) {
-                try {
-                    fileInputStream.close();
-                } catch (IOException e) {
-                    System.out.println("Close inputstream error");
-                }
-            }
-            if (in != null) {
-                in.close();
-            }
-        }
-        // filter the duplicate words,and build the graph
-        words = new ArrayList<String>(setWords);
-        graph = new int[words.size()][words.size()];
-        for (int i = 0; i < allWords.size() - 1; i++) {
-            String currentWord = allWords.get(i);
-            String nextWord = allWords.get(i + 1);
-            int row = words.indexOf(currentWord);
-            int column = words.indexOf(nextWord);
-            graph[row][column]++;
-        }
-    }*/
-
-    /**
-     * Application help inforation
-     */
-    /*private static void help() {
-        System.out.println("********* Welcome to this application *********");
-        System.out.println("1. Query Bridge Words");
-        System.out.println("2. Caculate Shortest Path between two words");
-        System.out.println("3. Randomly Walk");
-        System.out.println("4. Quit");
-    }*/
-
+   
 	public static void main(String[] args) {
 		
 		project1 program =new project1();
